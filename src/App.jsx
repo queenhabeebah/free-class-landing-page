@@ -7,7 +7,7 @@ const whatsappLink = "https://chat.whatsapp.com/EFKEFtr0VLq1kNUqTFrSyJ";
 // Reusable CTA Button
 const CTAButton = ({ text }) => {
   const handleClick = () => {
-    window.location.href = whatsappLink;
+    window.open(whatsappLink, "_blank");
   };
 
   return (
@@ -15,7 +15,7 @@ const CTAButton = ({ text }) => {
       onClick={handleClick}
       whileHover={{ scale: 1.08 }}
       whileTap={{ scale: 0.95 }}
-      className="px-8 py-4 text-lg font-bold text-white bg-orange-500 rounded-xl shadow-lg hover:bg-orange-600"
+      className="px-8 py-4 text-xl font-bold text-white bg-orange-500 rounded-xl shadow-lg hover:bg-orange-600"
     >
       {text}
     </motion.button>
@@ -26,13 +26,13 @@ export default function App() {
   return (
     <div className="bg-gray-100 text-gray-900">
       {/* HERO SECTION */}
-      <section className="min-h-screen flex flex-col justify-center items-center text-center p-6 bg-gray-900 text-white">
+      <section className="flex flex-col justify-center items-center text-center p-6 bg-gray-900 text-white">
         <motion.h1
           initial={{ opacity: 0, y: -40 }}
           animate={{ opacity: 1, y: 0 }}
           className="text-4xl md:text-5xl font-extrabold mb-4"
         >
-          Learn Coding From Scratch — Even With Just Your Phone
+          Learn Coding in 7 Days — Even If You're Starting From Zero
         </motion.h1>
 
         <motion.p
@@ -44,15 +44,21 @@ export default function App() {
           step-by-step, and transition to full frontend development when you're
           ready.
         </motion.p>
+        <p className="text-yellow-400 font-semibold mb-4">
+          🚀 Free 7-Day Bootcamp | Starts Soon | Limited Slots
+        </p>
 
-        <ul className="text-left mb-6 space-y-2 text-gray-300">
+        {/* <ul className="text-left mb-6 space-y-2 text-gray-300">
           <li>✅ Start with your phone — upgrade to a laptop as you grow</li>
           <li>✅ Perfect for complete beginners</li>
           <li>✅ Build real projects step-by-step</li>
           <li>✅ Join a supportive learning community</li>
-        </ul>
+        </ul> */}
 
-        <CTAButton text="👉 Join Free Training Now" />
+        <CTAButton text="👉 Click Here To The Join WhatsApp Group Now" />
+        <p className="text-sm text-gray-400 mt-3">
+👉 After clicking, you’ll join the WhatsApp group instantly and get full details.
+</p>
 
         <p className="text-red-500 font-semibold mt-4">
           ⚠️ Limited slots available — Don’t miss out!
@@ -61,14 +67,14 @@ export default function App() {
 
       {/* TRUST / AUTHORITY SECTION */}
       <section className="py-12 px-6 bg-white text-center">
+        <p className="text-3xl font-bold mb-6 text-red-600">25,000+ Students Trained</p>
         <h2 className="text-3xl font-bold mb-4">Why This Training Works</h2>
 
-        <p className="max-w-xl mx-auto text-gray-600 mb-6">
+        <p className="max-w-xl mx-auto text-gray-600">
           Unlike most confusing tutorials, I teach coding in a simple way that
           beginners understand — even if you're starting for the first time.
         </p>
 
-        <p className="text-3xl font-bold">25,000+ Students Trained</p>
       </section>
 
       {/* WHAT YOU WILL LEARN */}
@@ -86,7 +92,7 @@ export default function App() {
         </div>
 
         <div className="mt-6">
-          <CTAButton text="🚀 Secure Your Free Spot Now" />
+          <CTAButton text="👉 Join WhatsApp Group Now" />
         </div>
       </section>
 
@@ -105,7 +111,7 @@ export default function App() {
       {/* FINAL CTA */}
       <section className="py-16 text-center bg-gray-50 px-6">
         <h2 className="text-3xl font-extrabold mb-4">
-          Don’t Stay Confused About Tech
+          Stop Feeling Stuck — Start Your Tech Journey Today
         </h2>
 
         <p className="text-gray-600 mb-6 max-w-xl mx-auto">
@@ -113,7 +119,7 @@ export default function App() {
           will give you the clarity and direction you need to finally start.
         </p>
 
-        <CTAButton text="👉 Join the WhatsApp Training Now" />
+        <CTAButton text="👉 Join WhatsApp Group Now" />
 
         <p className="text-red-500 font-semibold mt-4">
           Limited slots. Once it fills up, access will be closed.
