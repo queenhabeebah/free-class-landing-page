@@ -7,6 +7,15 @@ const whatsappLink = "https://chat.whatsapp.com/EFKEFtr0VLq1kNUqTFrSyJ";
 // Reusable CTA Button
 const CTAButton = ({ text }) => {
   const handleClick = () => {
+    // 🔥 Track conversion BEFORE redirect
+    if (window.fbq) {
+      window.fbq('track', 'Lead', {
+        action: 'whatsapp_group_click',
+        location: 'landing_page'
+      });
+    }
+
+    // Then open WhatsApp
     window.open(whatsappLink, "_blank");
   };
 
@@ -14,7 +23,7 @@ const CTAButton = ({ text }) => {
     <motion.button
       onClick={handleClick}
       whileHover={{ scale: 1.08 }}
-      whileTap={{ scale: 0.94 }}
+      whileTap={{ scale: 0.95 }}
       className="px-8 py-4 text-xl font-bold text-white bg-orange-500 rounded-xl shadow-lg hover:bg-orange-600"
     >
       {text}
