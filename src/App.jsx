@@ -14,7 +14,7 @@ const CTAButton = ({ text }) => {
     <motion.button
       onClick={handleClick}
       whileHover={{ scale: 1.08 }}
-      whileTap={{ scale: 0.95 }}
+      whileTap={{ scale: 0.94 }}
       className="px-8 py-4 text-xl font-bold text-white bg-orange-500 rounded-xl shadow-lg hover:bg-orange-600"
     >
       {text}
