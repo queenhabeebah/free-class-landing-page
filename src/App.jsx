@@ -9,7 +9,7 @@ const CTAButton = ({ text }) => {
   const handleClick = () => {
     // 🔥 Track conversion BEFORE redirect
     if (window.fbq) {
-      window.fbq('track', 'Lead', {
+      window.fbq('track', 'CompleteRegistration', {
         action: 'whatsapp_group_click',
         location: 'landing_page'
       });
