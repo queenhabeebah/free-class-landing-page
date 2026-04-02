@@ -16,7 +16,9 @@ const CTAButton = ({ text }) => {
     }
 
     // Then open WhatsApp
-    window.open(whatsappLink, "_blank");
+    setTimeout(() => {
+  window.open(whatsappLink, "_blank");
+}, 300);
   };
 
   return (
